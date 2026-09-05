@@ -1,0 +1,82 @@
+{
+  "name": "Technical Archive System",
+  "theme": "dark",
+  "colors": {
+    "background": "#0F0F0F",
+    "surface": "#121414",
+    "surface-dim": "#121414",
+    "surface-bright": "#383939",
+    "surface-container-lowest": "#0D0E0F",
+    "surface-container-low": "#1B1C1C",
+    "surface-container": "#1F2020",
+    "surface-container-high": "#292A2A",
+    "surface-container-highest": "#343535",
+    "on-surface": "#E3E2E2",
+    "on-surface-variant": "#C4C7C7",
+    "primary": "#C8C6C5",
+    "on-primary": "#313030",
+    "primary-container": "#0F0F0F",
+    "secondary": "#C6C6C7",
+    "accent-lime": "#E2FF31",
+    "tertiary": "#B9D300",
+    "outline": "#8E9192",
+    "outline-variant": "#444748",
+    "error": "#FFB4AB"
+  },
+  "fonts": {
+    "headline": "IBM Plex Serif, serif",
+    "body": "Inter, sans-serif",
+    "mono": "JetBrains Mono, monospace"
+  },
+  "typography": {
+    "display-xl": {
+      "fontFamily": "IBM Plex Serif",
+      "fontSize": "80px",
+      "fontWeight": "600",
+      "lineHeight": "1.1",
+      "letterSpacing": "-0.02em"
+    },
+    "display-lg": {
+      "fontFamily": "IBM Plex Serif",
+      "fontSize": "48px",
+      "fontWeight": "500",
+      "lineHeight": "1.2",
+      "letterSpacing": "-0.01em"
+    },
+    "headline-md": {
+      "fontFamily": "IBM Plex Serif",
+      "fontSize": "32px",
+      "fontWeight": "500",
+      "lineHeight": "1.3"
+    },
+    "body-lg": {
+      "fontFamily": "Inter",
+      "fontSize": "18px",
+      "fontWeight": "400",
+      "lineHeight": "1.6"
+    },
+    "body-md": {
+      "fontFamily": "Inter",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "lineHeight": "1.6"
+    },
+    "meta-technical": {
+      "fontFamily": "Inter",
+      "fontSize": "12px",
+      "fontWeight": "500",
+      "lineHeight": "1.2",
+      "letterSpacing": "0.05em"
+    }
+  },
+  "spacing": {
+    "unit": "4px",
+    "gutter": "24px",
+    "margin-desktop": "64px",
+    "margin-mobile": "20px",
+    "columns": 12
+  },
+  "borderRadius": {
+    "none": "0px"
+  }
+}

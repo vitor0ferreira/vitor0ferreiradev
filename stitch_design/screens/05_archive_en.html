@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>THE DIGITAL ARCHIVE - ARCHIVE</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;500;600&amp;family=Inter:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-variant": "#343535",
+                    "surface": "#121414",
+                    "surface-dim": "#121414",
+                    "on-primary": "#313030",
+                    "primary-fixed-dim": "#c8c6c5",
+                    "on-background": "#e3e2e2",
+                    "surface-container-low": "#1b1c1c",
+                    "on-tertiary-fixed": "#191e00",
+                    "tertiary-fixed-dim": "#b9d300",
+                    "on-secondary-fixed": "#1a1c1c",
+                    "inverse-primary": "#5f5e5e",
+                    "on-surface": "#e3e2e2",
+                    "tertiary": "#b9d300",
+                    "on-surface-variant": "#c4c7c7",
+                    "on-secondary-container": "#b4b5b5",
+                    "secondary-fixed": "#e2e2e2",
+                    "primary-container": "#0f0f0f",
+                    "surface-container-lowest": "#0d0e0f",
+                    "primary": "#c8c6c5",
+                    "tertiary-fixed": "#d4f01c",
+                    "outline-variant": "#444748",
+                    "inverse-surface": "#e3e2e2",
+                    "surface-tint": "#c8c6c5",
+                    "error": "#ffb4ab",
+                    "on-primary-fixed-variant": "#474646",
+                    "error-container": "#93000a",
+                    "on-tertiary": "#2c3400",
+                    "on-tertiary-container": "#738400",
+                    "primary-fixed": "#e5e2e1",
+                    "secondary-fixed-dim": "#c6c6c7",
+                    "on-primary-fixed": "#1c1b1b",
+                    "background": "#121414",
+                    "on-error": "#690005",
+                    "surface-container-highest": "#343535",
+                    "tertiary-container": "#0d1100",
+                    "on-primary-container": "#7d7b7b",
+                    "surface-container-high": "#292a2a",
+                    "secondary": "#c6c6c7",
+                    "on-secondary": "#2f3131",
+                    "outline": "#8e9192",
+                    "surface-container": "#1f2020",
+                    "on-secondary-fixed-variant": "#454747",
+                    "on-error-container": "#ffdad6",
+                    "inverse-on-surface": "#303031",
+                    "secondary-container": "#454747",
+                    "surface-bright": "#383939",
+                    "on-tertiary-fixed-variant": "#414c00"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-mobile": "20px",
+                    "unit": "4px",
+                    "column-count": "12",
+                    "margin-desktop": "64px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "display-xl-mobile": [
+                            "ibmPlexSerif"
+                    ],
+                    "display-lg": [
+                            "ibmPlexSerif"
+                    ],
+                    "body-lg": [
+                            "inter"
+                    ],
+                    "body-md": [
+                            "inter"
+                    ],
+                    "meta-technical": [
+                            "inter"
+                    ],
+                    "headline-md": [
+                            "ibmPlexSerif"
+                    ],
+                    "display-xl": [
+                            "ibmPlexSerif"
+                    ]
+            },
+            "fontSize": {
+                    "display-xl-mobile": [
+                            "42px",
+                            {
+                                    "lineHeight": "1.1",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "display-lg": [
+                            "48px",
+                            {
+                                    "lineHeight": "1.2",
+                                    "letterSpacing": "-0.01em",
+                                    "fontWeight": "500"
+                            }
+                    ],
+                    "body-lg": [
+                            "18px",
+                            {
+                                    "lineHeight": "1.6",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "body-md": [
+                            "16px",
+                            {
+                                    "lineHeight": "1.6",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "meta-technical": [
+                            "12px",
+                            {
+                                    "lineHeight": "1.2",
+                                    "letterSpacing": "0.05em",
+                                    "fontWeight": "500"
+                            }
+                    ],
+                    "headline-md": [
+                            "32px",
+                            {
+                                    "lineHeight": "1.3",
+                                    "fontWeight": "500"
+                            }
+                    ],
+                    "display-xl": [
+                            "80px",
+                            {
+                                    "lineHeight": "1.1",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "600"
+                            }
+                    ]
+            }
+        },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #0F0F0F;
+            color: #F5F5F5;
+        }
+        .grid-layout {
+            display: grid;
+            grid-template-columns: repeat(12, minmax(0, 1fr));
+            gap: 24px;
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md antialiased overflow-x-hidden">
+<!-- Top Navigation (Mobile Only) -->
+<nav class="md:hidden bg-surface dark:bg-surface border-b border-outline-variant/20 flex justify-between items-center w-full px-margin-mobile py-4 sticky top-0 z-50">
+<div class="font-display-lg text-headline-md text-primary dark:text-primary tracking-tighter">THE DIGITAL ARCHIVE</div>
+<button aria-label="Menu" class="text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">grid_view</span>
+</button>
+</nav>
+<!-- Side Navigation (Desktop Only) -->
+<aside class="hidden md:flex fixed left-0 top-0 h-full w-20 z-40 flex-col justify-between py-8 bg-surface dark:bg-surface border-r border-outline-variant/20">
+<div class="flex flex-col items-center gap-8">
+<div aria-label="Archive Logo" class="font-display-lg text-primary text-xl font-bold">A.V1</div>
+<nav class="flex flex-col w-full">
+<a aria-label="INDEX" class="text-on-surface-variant flex flex-col items-center justify-center py-4 hover:bg-surface-container-high transition-all" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 0;">radio_button_checked</span>
+<span class="font-meta-technical text-meta-technical uppercase text-[10px]">INDEX</span>
+</a>
+<a aria-label="ARCHIVE" class="text-tertiary flex flex-col items-center justify-center py-4 border-l-2 border-tertiary bg-surface-container-high scale-95 duration-150" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">database</span>
+<span class="font-meta-technical text-meta-technical uppercase text-[10px]">ARCHIVE</span>
+</a>
+<a aria-label="LAB" class="text-on-surface-variant flex flex-col items-center justify-center py-4 hover:bg-surface-container-high transition-all" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 0;">science</span>
+<span class="font-meta-technical text-meta-technical uppercase text-[10px]">LAB</span>
+</a>
+<a aria-label="INTEL" class="text-on-surface-variant flex flex-col items-center justify-center py-4 hover:bg-surface-container-high transition-all" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 0;">analytics</span>
+<span class="font-meta-technical text-meta-technical uppercase text-[10px]">INTEL</span>
+</a>
+<a aria-label="SECURE" class="text-on-surface-variant flex flex-col items-center justify-center py-4 hover:bg-surface-container-high transition-all" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 0;">lock</span>
+<span class="font-meta-technical text-meta-technical uppercase text-[10px]">SECURE</span>
+</a>
+</nav>
+</div>
+<div class="flex flex-col items-center gap-4">
+<div class="font-meta-technical text-meta-technical text-on-surface-variant rotate-[-90deg] whitespace-nowrap mb-8 text-[10px]">COORD: 34.0522° N</div>
+<a aria-label="SYSTEM STATUS" class="text-on-surface-variant flex flex-col items-center justify-center py-4 hover:bg-surface-container-high transition-all" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 0;">dns</span>
+<span class="font-meta-technical text-meta-technical uppercase text-[10px] text-center">SYSTEM STATUS</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="md:ml-20 min-h-screen px-margin-mobile md:px-margin-desktop py-12 md:py-24">
+<!-- Header -->
+<header class="mb-16 border-b border-outline-variant/20 pb-8">
+<h1 class="font-display-xl-mobile md:font-display-xl text-display-xl-mobile md:text-display-xl text-primary tracking-tighter mb-8">01 // ARCHIVE</h1>
+<!-- Filter Bar -->
+<div class="flex flex-wrap gap-4 font-meta-technical text-meta-technical text-on-surface-variant uppercase tracking-widest">
+<button class="px-4 py-2 border border-tertiary text-tertiary bg-surface-container-high">ALL</button>
+<button class="px-4 py-2 border border-outline-variant/30 hover:border-outline-variant transition-colors">SYSTEMS</button>
+<button class="px-4 py-2 border border-outline-variant/30 hover:border-outline-variant transition-colors">INTERFACES</button>
+<button class="px-4 py-2 border border-outline-variant/30 hover:border-outline-variant transition-colors">LAB_TESTS</button>
+</div>
+</header>
+<!-- Archive List -->
+<div class="flex flex-col">
+<!-- Record Entry 1 -->
+<article class="grid-layout py-16 border-b border-outline-variant/20 hover:bg-[#1A1A1A] transition-colors duration-300 group">
+<!-- Left Column (Narrow) -->
+<div class="col-span-12 md:col-span-2 flex flex-col gap-2 font-meta-technical text-meta-technical text-on-surface-variant uppercase">
+<span class="text-tertiary">[001]</span>
+<span>2024.Q1</span>
+</div>
+<!-- Center Column (Wide) -->
+<div class="col-span-12 md:col-span-6 flex flex-col gap-6 pr-0 md:pr-8">
+<h2 class="font-display-lg text-headline-md text-primary">Quantum State Visualizer</h2>
+<div class="text-on-surface-variant space-y-4">
+<p><strong class="text-primary font-medium">Problem:</strong> Legacy systems lacked real-time fidelity when rendering complex superposition models, leading to latency in analysis workflows.</p>
+<p><strong class="text-primary font-medium">Architecture:</strong> Developed a custom WebGL pipeline utilizing compute shaders for parallel processing of state vectors, decoupled from the main UI thread via Web Workers.</p>
+<p><strong class="text-primary font-medium">Result:</strong> Achieved a 60fps rendering baseline with a 40% reduction in memory overhead.</p>
+</div>
+<div class="font-meta-technical text-meta-technical text-on-surface-variant/70 border border-outline-variant/20 p-4 inline-block self-start bg-surface-container-lowest">
+                        WebGL, Compute Shaders, Web Workers, React, Rust (WASM)
+                    </div>
+</div>
+<!-- Right Column (Medium) -->
+<div class="col-span-12 md:col-span-4 mt-8 md:mt-0 relative aspect-[3/4] border border-outline-variant/20 bg-surface-container-lowest overflow-hidden flex items-center justify-center group-hover:border-outline-variant transition-colors">
+<img class="absolute inset-0 w-full h-full object-cover opacity-80 mix-blend-luminosity grayscale group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500" data-alt="A highly detailed, stark minimalist UI mockup of a technical data visualization dashboard. The interface uses a dark mode color palette of deep blacks and soft whites, with sharp geometric lines and graphs. Acid lime accents highlight key data points. The aesthetic is professional, editorial, and Swiss-inspired, prioritizing legibility and structural precision over decoration." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlMCUvRVq2NKne-_EqvQQmpEe2C9N7oGz_a2q7UmIJsv2_m9772GzyZSdIbhwSR9p9vISixrHE-UFLo0cJQIPn6JebGjOInG23XdPi2jnVd0EaZVFV-LgidWy6Le_y2Mw0krhqFsJZj3a6cO8r7hqdDPmT4QPSKOo9g1EffntdHnlt7VizX4TZgGCJqJtXntuZudnBPjkpMK4FPycjN-MhaC0MopgagN3Glx6mQ8crcwGfsFQvIDEzjQ"/>
+<!-- Tech Marker -->
+<div class="absolute top-4 right-4 text-tertiary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">my_location</span>
+</div>
+</div>
+</article>
+<!-- Record Entry 2 -->
+<article class="grid-layout py-16 border-b border-outline-variant/20 hover:bg-[#1A1A1A] transition-colors duration-300 group">
+<div class="col-span-12 md:col-span-2 flex flex-col gap-2 font-meta-technical text-meta-technical text-on-surface-variant uppercase">
+<span class="text-primary group-hover:text-tertiary transition-colors">[002]</span>
+<span>2023.Q4</span>
+</div>
+<div class="col-span-12 md:col-span-6 flex flex-col gap-6 pr-0 md:pr-8">
+<h2 class="font-display-lg text-headline-md text-primary">Distributed Ledger Interface</h2>
+<div class="text-on-surface-variant space-y-4">
+<p><strong class="text-primary font-medium">Problem:</strong> Navigating cross-chain transaction histories was opaque and required multiple fragmented tools.</p>
+<p><strong class="text-primary font-medium">Architecture:</strong> Aggregated node APIs into a unified GraphQL layer, presenting data through an infinite-scroll virtualization engine optimized for low-end hardware.</p>
+</div>
+<div class="font-meta-technical text-meta-technical text-on-surface-variant/70 border border-outline-variant/20 p-4 inline-block self-start bg-surface-container-lowest">
+                        GraphQL, Node.js, Virtualization, TailwindCSS
+                    </div>
+</div>
+<div class="col-span-12 md:col-span-4 mt-8 md:mt-0 relative aspect-[3/4] border border-outline-variant/20 bg-surface-container-lowest overflow-hidden flex items-center justify-center group-hover:border-outline-variant transition-colors">
+<div class="absolute inset-0 bg-cover bg-center opacity-60 group-hover:opacity-100 transition-opacity duration-500 mix-blend-screen" data-alt="A sleek, architectural wireframe of a distributed network topology. The design is strictly black, white, and grey with thin 1px lines creating a complex web of nodes and connections. Sparse, bright green (acid lime) markers highlight specific active nodes. The visual style is highly technical, reflecting a blueprint or schematic design approach with ample negative space." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAJQcVLX0Qiro0Wwev3rtjSUXPbz9pL6y6-26tyllHEI78TQY08CB2HbCdozm4kXucVpseYxv8vDb1BiF4YhFjsNuvcgtBRPCgWRjpzUs66JPMJANq00XtUoCk90Lywz8bu4Y5a9bpnwm-ExCXn_zx-IwMyKazbNdtGR41gWukooh-RpPfTj6TZ-TSwoUFp7iAFJOZhDKbeheXz4gJUv6a64MX2zKT-movMSXFbkbRLXKTnSHIZFdPFWA')"></div>
+</div>
+</article>
+</div>
+</main>
+<!-- Footer -->
+<footer class="md:ml-20 bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-outline-variant/20 w-full flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop py-12 gap-gutter">
+<div class="font-meta-technical text-meta-technical text-on-surface-variant dark:text-on-surface-variant">©2024 ARCHIVE PROTOCOL</div>
+<nav class="flex gap-8">
+<a class="font-meta-technical text-meta-technical text-on-surface-variant hover:text-primary transition-colors uppercase" href="#">SYSTEM_LOG</a>
+<a class="font-meta-technical text-meta-technical text-on-surface-variant hover:text-primary transition-colors uppercase" href="#">REPOSITORY</a>
+<a class="font-meta-technical text-meta-technical text-on-surface-variant hover:text-primary transition-colors uppercase" href="#">LICENSE</a>
+</nav>
+</footer>
+</body></html>

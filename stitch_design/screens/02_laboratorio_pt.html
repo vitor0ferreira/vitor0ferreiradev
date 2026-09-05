@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>O Arquivo Digital - Laboratório</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;500;600&amp;family=Inter:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                            "surface-variant": "#343535",
+                            "surface": "#121414",
+                            "surface-dim": "#121414",
+                            "on-primary": "#313030",
+                            "primary-fixed-dim": "#c8c6c5",
+                            "on-background": "#e3e2e2",
+                            "surface-container-low": "#1b1c1c",
+                            "on-tertiary-fixed": "#191e00",
+                            "tertiary-fixed-dim": "#b9d300",
+                            "on-secondary-fixed": "#1a1c1c",
+                            "inverse-primary": "#5f5e5e",
+                            "on-surface": "#e3e2e2",
+                            "tertiary": "#b9d300",
+                            "on-surface-variant": "#c4c7c7",
+                            "on-secondary-container": "#b4b5b5",
+                            "secondary-fixed": "#e2e2e2",
+                            "primary-container": "#0f0f0f",
+                            "surface-container-lowest": "#0d0e0f",
+                            "primary": "#c8c6c5",
+                            "tertiary-fixed": "#d4f01c",
+                            "outline-variant": "#444748",
+                            "inverse-surface": "#e3e2e2",
+                            "surface-tint": "#c8c6c5",
+                            "error": "#ffb4ab",
+                            "on-primary-fixed-variant": "#474646",
+                            "error-container": "#93000a",
+                            "on-tertiary": "#2c3400",
+                            "on-tertiary-container": "#738400",
+                            "primary-fixed": "#e5e2e1",
+                            "secondary-fixed-dim": "#c6c6c7",
+                            "on-primary-fixed": "#1c1b1b",
+                            "background": "#121414",
+                            "on-error": "#690005",
+                            "surface-container-highest": "#343535",
+                            "tertiary-container": "#0d1100",
+                            "on-primary-container": "#7d7b7b",
+                            "surface-container-high": "#292a2a",
+                            "secondary": "#c6c6c7",
+                            "on-secondary": "#2f3131",
+                            "outline": "#8e9192",
+                            "surface-container": "#1f2020",
+                            "on-secondary-fixed-variant": "#454747",
+                            "on-error-container": "#ffdad6",
+                            "inverse-on-surface": "#303031",
+                            "secondary-container": "#454747",
+                            "surface-bright": "#383939",
+                            "on-tertiary-fixed-variant": "#414c00"
+                    },
+                    "borderRadius": {
+                            "DEFAULT": "0.25rem",
+                            "lg": "0.5rem",
+                            "xl": "0.75rem",
+                            "full": "9999px"
+                    },
+                    "spacing": {
+                            "margin-mobile": "20px",
+                            "unit": "4px",
+                            "column-count": "12",
+                            "margin-desktop": "64px",
+                            "gutter": "24px"
+                    },
+                    "fontFamily": {
+                            "display-xl-mobile": [
+                                    "IBM Plex Serif", "serif"
+                            ],
+                            "display-lg": [
+                                    "IBM Plex Serif", "serif"
+                            ],
+                            "body-lg": [
+                                    "Inter", "sans-serif"
+                            ],
+                            "body-md": [
+                                    "Inter", "sans-serif"
+                            ],
+                            "meta-technical": [
+                                    "Inter", "sans-serif"
+                            ],
+                            "headline-md": [
+                                    "IBM Plex Serif", "serif"
+                            ],
+                            "display-xl": [
+                                    "IBM Plex Serif", "serif"
+                            ]
+                    },
+                    "fontSize": {
+                            "display-xl-mobile": [
+                                    "42px",
+                                    {
+                                            "lineHeight": "1.1",
+                                            "fontWeight": "600"
+                                    }
+                            ],
+                            "display-lg": [
+                                    "48px",
+                                    {
+                                            "lineHeight": "1.2",
+                                            "letterSpacing": "-0.01em",
+                                            "fontWeight": "500"
+                                    }
+                            ],
+                            "body-lg": [
+                                    "18px",
+                                    {
+                                            "lineHeight": "1.6",
+                                            "fontWeight": "400"
+                                    }
+                            ],
+                            "body-md": [
+                                    "16px",
+                                    {
+                                            "lineHeight": "1.6",
+                                            "fontWeight": "400"
+                                    }
+                            ],
+                            "meta-technical": [
+                                    "12px",
+                                    {
+                                            "lineHeight": "1.2",
+                                            "letterSpacing": "0.05em",
+                                            "fontWeight": "500"
+                                    }
+                            ],
+                            "headline-md": [
+                                    "32px",
+                                    {
+                                            "lineHeight": "1.3",
+                                            "fontWeight": "500"
+                                    }
+                            ],
+                            "display-xl": [
+                                    "80px",
+                                    {
+                                            "lineHeight": "1.1",
+                                            "letterSpacing": "-0.02em",
+                                            "fontWeight": "600"
+                                    }
+                            ]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: #0F0F0F; /* Enforcing pure background */
+            color: #e3e2e2;
+        }
+        .acid-lime-text { color: #E2FF31; }
+        .acid-lime-bg { background-color: #E2FF31; color: #121414; }
+        .acid-lime-border { border-color: #E2FF31; }
+        
+        .tech-border { border: 1px solid rgba(136, 136, 136, 0.2); }
+        .tech-border-b { border-bottom: 1px solid rgba(136, 136, 136, 0.2); }
+        .tech-border-r { border-right: 1px solid rgba(136, 136, 136, 0.2); }
+        
+        /* Grid system */
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(12, minmax(0, 1fr));
+            gap: 24px;
+        }
+        
+        /* Hover effects */
+        .fragment-card {
+            transition: all 0.3s ease;
+        }
+        .fragment-card:hover {
+            background-color: #1A1A1A;
+            border-color: #F5F5F5;
+        }
+        .fragment-card .metadata-reveal {
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all 0.3s ease;
+        }
+        .fragment-card:hover .metadata-reveal {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Code snippet styling */
+        .code-block {
+            font-family: 'Courier New', Courier, monospace;
+            white-space: pre-wrap;
+            color: #888;
+        }
+    </style>
+</head>
+<body class="bg-primary-container text-on-surface antialiased min-h-screen flex selection:bg-tertiary selection:text-on-tertiary">
+<!-- SideNavBar -->
+<nav class="hidden md:flex bg-surface dark:bg-surface fixed left-0 top-0 h-full w-16 md:w-20 border-r border-outline-variant/20 flex-col justify-between py-8 z-40">
+<div class="flex flex-col items-center gap-12">
+<!-- Brand -->
+<div class="transform -rotate-90 whitespace-nowrap mt-16 text-primary dark:text-primary font-display-lg text-lg tracking-tighter">
+                ARQUIVO.V1
+            </div>
+<!-- Links -->
+<div class="flex flex-col gap-8 w-full mt-12">
+<a class="text-on-surface-variant flex flex-col items-center justify-center py-4 hover:bg-surface-container-high transition-all group" href="#">
+<span class="material-symbols-outlined text-xl group-hover:text-primary transition-colors">radio_button_checked</span>
+<span class="sr-only">ÍNDICE</span>
+</a>
+<a class="text-on-surface-variant flex flex-col items-center justify-center py-4 hover:bg-surface-container-high transition-all group" href="#">
+<span class="material-symbols-outlined text-xl group-hover:text-primary transition-colors">database</span>
+<span class="sr-only">ARQUIVO</span>
+</a>
+<a class="text-tertiary flex flex-col items-center justify-center py-4 border-l-2 border-tertiary scale-95 duration-150" href="#">
+<span class="material-symbols-outlined text-xl">science</span>
+<span class="sr-only">LABORATÓRIO</span>
+</a>
+<a class="text-on-surface-variant flex flex-col items-center justify-center py-4 hover:bg-surface-container-high transition-all group" href="#">
+<span class="material-symbols-outlined text-xl group-hover:text-primary transition-colors">analytics</span>
+<span class="sr-only">INTEL</span>
+</a>
+<a class="text-on-surface-variant flex flex-col items-center justify-center py-4 hover:bg-surface-container-high transition-all group" href="#">
+<span class="material-symbols-outlined text-xl group-hover:text-primary transition-colors">lock</span>
+<span class="sr-only">SEGURO</span>
+</a>
+</div>
+</div>
+<!-- Footer / CTA -->
+<div class="flex flex-col items-center gap-8">
+<a class="text-on-surface-variant flex flex-col items-center justify-center py-4 hover:bg-surface-container-high transition-all group" href="#">
+<span class="material-symbols-outlined text-xl group-hover:text-primary transition-colors">dns</span>
+<span class="sr-only">STATUS DO SISTEMA</span>
+</a>
+<div class="transform -rotate-90 whitespace-nowrap mb-12 font-meta-technical text-meta-technical uppercase text-on-surface-variant tracking-widest">
+                COORD: 34.0522° N
+            </div>
+</div>
+</nav>
+<!-- Top Navigation for Mobile (Fallback) -->
+<header class="md:hidden bg-surface dark:bg-surface w-full fixed top-0 z-40 border-b border-outline-variant/20 flex justify-between items-center px-margin-mobile py-4">
+<div class="font-display-lg text-headline-md text-primary dark:text-primary tracking-tighter">O ARQUIVO DIGITAL</div>
+<button class="text-primary p-2">
+<span class="material-symbols-outlined">grid_view</span>
+</button>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-1 md:ml-20 pt-24 md:pt-16 pb-24 px-margin-mobile md:px-margin-desktop min-h-screen">
+<!-- Header Section -->
+<section class="tech-grid mb-16 md:mb-32">
+<div class="col-span-12 md:col-span-8">
+<h1 class="font-meta-technical text-meta-technical uppercase text-on-surface-variant tracking-widest mb-4">
+                    [ MÓDULO_ID: 02 ]
+                </h1>
+<h2 class="font-display-xl-mobile md:font-display-xl text-display-xl-mobile md:text-display-xl text-primary mb-8">
+                    02 // LABORATÓRIO
+                </h2>
+<p class="font-body-lg text-body-lg text-on-surface max-w-2xl border-l border-outline-variant/50 pl-4 py-2 uppercase">
+                    FRAGMENTOS EXPERIMENTAIS, PENSAMENTOS INACABADOS E ESBOÇOS PROCEDURAIS.
+                </p>
+</div>
+<div class="col-span-12 md:col-span-4 flex md:justify-end items-end">
+<div class="font-meta-technical text-meta-technical uppercase text-on-surface-variant text-right hidden md:block">
+                    STATUS: ATIVO<br/>
+                    FRAGMENTOS: 42<br/>
+                    ÚLTIMA_ATUALIZAÇÃO: <span class="acid-lime-text">SYS_TIME()</span>
+</div>
+</div>
+</section>
+<!-- Lab Grid -->
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Fragment 1: Image -->
+<article class="fragment-card tech-border p-4 flex flex-col h-full group cursor-pointer">
+<div class="relative w-full aspect-[3/4] mb-4 overflow-hidden border border-outline-variant/30">
+<img alt="Simulation Preview" class="object-cover w-full h-full filter grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="A stark, monochrome technical rendering of fluid dynamics simulation. Complex wireframe meshes swirl intricately, depicted in deep charcoal and bright silver lines against a pure black void. Accents of stark white highlight nodes of turbulence, conveying a highly precise, scientific, and slightly brutalist digital aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZAeIhKWPAc-JrcjtD76wef0dovbgnkRuIOJjousANTs5zZsSyTkLOVQQveoXShRN1qKgcw029YkavNBi057H1V4rzh5hgba3fYtMjHkSo4CvdgKcTrzdazApmMs5SuraJHKtvTWmzNLh8eupiZLMgyEuGu8EgwQTp-9VdFnbMMXZFXlU34zpDNblTOyip7VYl4oAG5PV4vO9LMNQA8HnSwxhawdXmarG5RkIYl8hIJN7wE55kX228_g"/>
+<div class="absolute top-2 right-2 font-meta-technical text-meta-technical bg-primary-container border border-outline-variant/50 px-2 py-1 text-on-surface">
+                        ID: 42
+                    </div>
+</div>
+<div class="mt-auto">
+<div class="font-meta-technical text-meta-technical text-tertiary mb-2 uppercase tracking-wider">
+                        ESBOÇO-42: DINÂMICA_DE_FLUIDOS
+                    </div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">
+                        Análise de comportamento de partículas sob vetores extremos de estresse computacional.
+                    </p>
+<div class="metadata-reveal font-meta-technical text-meta-technical text-on-surface-variant pt-2 tech-border-t text-xs">
+                        TEMPO_RENDER: 4200ms | SHADER: GLSL | <span class="acid-lime-text">VER_FONTE</span>
+</div>
+</div>
+</article>
+<!-- Fragment 2: Text/Code -->
+<article class="fragment-card tech-border p-4 flex flex-col h-full bg-surface-container-low group cursor-pointer">
+<div class="flex-1 mb-4 flex flex-col">
+<div class="font-meta-technical text-meta-technical text-on-surface-variant mb-4 border-b border-outline-variant/30 pb-2">
+                        // FRAGMENTO_DE_PENSAMENTO_08
+                    </div>
+<div class="code-block text-sm flex-1 opacity-70 group-hover:opacity-100 transition-opacity">
+function generate_void() {
+  let space = new Grid(12);
+  while (space.hasEntropy()) {
+    space.collapse(random_vector());
+    if (space.density &lt; 0.1) {
+      break;
+    }
+  }
+  return space.render(MONOCHROME);
+}
+
+// Nota: Certifique-se de que o alinhamento da grade não destrua os limites.
+                    </div>
+</div>
+<div class="mt-auto">
+<div class="font-meta-technical text-meta-technical text-tertiary mb-2 uppercase tracking-wider">
+                        ALGORITMO: GERADOR_DE_VAZIO
+                    </div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">
+                        Script de geração procedural testando os limites das restrições de layout de espaço negativo.
+                    </p>
+<div class="metadata-reveal font-meta-technical text-meta-technical text-on-surface-variant pt-2 tech-border-t text-xs">
+                        LANG: JS | DEP: NENHUMA | <span class="acid-lime-text">EXECUTAR</span>
+</div>
+</div>
+</article>
+<!-- Fragment 3: Image -->
+<article class="fragment-card tech-border p-4 flex flex-col h-full group cursor-pointer">
+<div class="relative w-full aspect-[3/4] mb-4 overflow-hidden border border-outline-variant/30">
+<img alt="Typography Experiment" class="object-cover w-full h-full filter grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="An abstract typographic poster displaying fragmented, large-scale serif lettering intercut with sharp geometric sans-serif numbers. The layout is chaotic yet constrained within a rigid grid, rendered entirely in high-contrast black and white. Subtle glitch artifacts and halftone patterns add texture to the sterile, archival feel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTqKctY6VTx_CrWxg5uQXmCXi8MGcG0D5WAe3q-ChFis4hxs0HWAkKbjuhSQIzAKIMvnHu6L32lPJAyeipwNpAWtcBgkj3q3G8vgGPrwENbgXiTqnF0Xat8_UZG6QMC-TlrTarHkfB6w2kQ9vvac5r1bdN76nbJGGhKXgRT3iJxR3JsHkTrHTQ2jFi4jPCtSbDZcpvahhEayTkjKxjgPL37exoGSkMgO2ucnfqAXSSG-xL9Ynr16jcMA"/>
+<div class="absolute top-2 right-2 font-meta-technical text-meta-technical bg-primary-container border border-outline-variant/50 px-2 py-1 text-on-surface">
+                        ID: 17
+                    </div>
+</div>
+<div class="mt-auto">
+<div class="font-meta-technical text-meta-technical text-tertiary mb-2 uppercase tracking-wider">
+                        TIPO-17: GLITCH_SERIF
+                    </div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">
+                        Interseção de formas clássicas de serifa editorial com algoritmos de decaimento digital.
+                    </p>
+<div class="metadata-reveal font-meta-technical text-meta-technical text-on-surface-variant pt-2 tech-border-t text-xs">
+                        FONTE: IBM_PLEX | FILTRO: RUÍDO | <span class="acid-lime-text">VER_FONTE</span>
+</div>
+</div>
+</article>
+</section>
+<!-- Pagination / Footer indicator -->
+<div class="mt-24 tech-border-t pt-8 flex justify-between items-center">
+<div class="font-meta-technical text-meta-technical text-on-surface-variant">
+                PÁGINA 01 / 04
+            </div>
+<button class="font-meta-technical text-meta-technical uppercase text-on-surface border border-outline-variant px-6 py-2 hover:bg-surface-container-high transition-colors flex items-center gap-2">
+                CARREGAR_MAIS <span class="acid-lime-text text-lg leading-none">+</span>
+</button>
+</div>
+</main>
+</body></html>
