@@ -76,10 +76,10 @@ O projeto trata o trabalho de desenvolvimento e arquitetura de software com a re
 
 ```bash
 # 1. Clone o repositório
-git clone https://github.com/vitor0ferreira/personal-portfolio.git
+git clone https://github.com/vitor0ferreira/vitor0ferreiradev.git
 
 # 2. Acesse a pasta do projeto
-cd personal-portfolio
+cd vitor0ferreiradev
 
 # 3. Instale as dependências
 npm install
